@@ -46,10 +46,11 @@ const SidebarAdmin = ({ showSidebar, handleSidebar }) => {
             <li className="px-2 py-2">E-Arsip</li>
             <li className="px-2 py-2">Payroll</li>
           </ul>
-          <ItemSidebar title={"Chat"} image={"/assets/icons/ic_chat.svg"} />
+          <ItemSidebar title={"Chat"} isNotif image={"/assets/icons/ic_chat.svg"} />
           <ItemSidebar
             title={"Notifikasi"}
             image={"/assets/icons/ic_notif.svg"}
+            isNotif
           />
           <ItemSidebar
             title={"User Database"}

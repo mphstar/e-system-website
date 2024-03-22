@@ -2,9 +2,9 @@ import Image from "next/image";
 
 const IconsSidebar = ({ image, isNotif = false }) => {
   return (
-    <div className="w-[30px] relative">
+    <div className="w-[30px] relative p-1">
       {isNotif && (
-        <div className="w-3 h-3 rounded-full bg-red-500 absolute top-0 right-0"></div>
+        <div className="w-2 h-2 rounded-full bg-red-500 absolute top-0 right-0"></div>
       )}
       <Image
         width={500}
