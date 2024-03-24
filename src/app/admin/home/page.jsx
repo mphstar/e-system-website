@@ -1,8 +1,9 @@
 "use client"
 
 import AdminPage from "@/components/templates/AdminPage"
+import dynamic from "next/dynamic";
 import { useState } from "react"
-import ReactApexChart from "react-apexcharts"
+const ReactApexChart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
 const ItemEmployee = ({ name, total }) => {
   return (
@@ -14,6 +15,7 @@ const ItemEmployee = ({ name, total }) => {
 }
 
 const page = () => {
+  
 
   const [pieChart, setPieChart] = useState({
     series: [44, 55, 41, 17, 15],
@@ -128,10 +130,11 @@ const page = () => {
             <p>Approval Result</p>
             <div className="flex flex-col justify-center items-center h-full">
               <div className="max-w-[500px]">
-                <ReactApexChart options={{
+                <ReactApexChart width={'100%'} height={'100%'} options={{
                   chart: {
                     type: 'pie',
                   },
+                  
                   labels: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E'],
                 }} type="donut" series={[44, 55, 13, 43, 22]} />
               </div>
@@ -146,7 +149,7 @@ const page = () => {
             <h1 className="py-2">Last Transaction</h1>
             <div className="flex flex-col gap-2 min-h-[300px] max-h-[400px] overflow-y-auto scrollbar-hide">
               {Array.from({ length: 20 }).map((_, i) => (
-                <div className="flex flex-row items-center gap-2">
+                <div key={i} className="flex flex-row items-center gap-2">
                   <img className="rounded-full w-5 h-5" src="https://picsum.photos/200/300" alt="photo" />
                   <div className="flex flex-col flex-1">
                     <h1 className="text-sm">John Doe</h1>
@@ -176,7 +179,7 @@ const page = () => {
           </div>
         </div>
         <div className="flex flex-col">
-          <ReactApexChart options={barChart} height={400} series={barChart.series} type="bar" />
+          <ReactApexChart width={'100%'} options={barChart} height={400} series={barChart.series} type="bar" />
         </div>
       </div>
     </AdminPage>
