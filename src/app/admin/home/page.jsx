@@ -85,7 +85,7 @@ const page = () => {
   })
 
   return (
-    <AdminPage>
+    <AdminPage selected="home">
       <div className="grid grid-cols-1 lg:grid-cols-6 gap-3">
         <div className="flex flex-col w-full lg:flex-1 lg:col-span-4">
           <div className="flex flex-col bg-primary text-white px-4 py-3">
@@ -168,12 +168,12 @@ const page = () => {
         <div className="flex flex-row gap-2 items-center text-xs">
           <span className="text-sm">Sort Date</span>
           <div className="border-[2px] rounded-[5px] px-3 py-1">
-            <select className="outline-none" name="" id="">
+            <select className="outline-none bg-transparent" name="" id="">
               <option value="">Month</option>
             </select>
           </div>
           <div className="border-[2px] rounded-[5px] px-3 py-1">
-            <select className="outline-none" name="" id="">
+            <select className="outline-none bg-transparent" name="" id="">
               <option value="">Year</option>
             </select>
           </div>
