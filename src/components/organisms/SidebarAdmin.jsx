@@ -64,10 +64,14 @@ const SidebarAdmin = ({ showSidebar, handleSidebar, selected = '' }) => {
             image={"/assets/icons/ic_notif.svg"}
             isNotif
           />
-          <ItemSidebar
-            title={"User Database"}
-            image={"/assets/icons/ic_user.svg"}
-          />
+          <Link href="/admin/user-database">
+            <ItemSidebar
+              selected={selected === 'userDatabase'}
+              title={"User Database"}
+              image={"/assets/icons/ic_user.svg"}
+            />
+          </Link>
+
           <ItemSidebar
             title={"Division"}
             image={"/assets/icons/ic_divisi.svg"}

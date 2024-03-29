@@ -35,7 +35,7 @@ const divisi = [
 
 const page = () => {
     return (
-        <AdminPage selected='absensi'>
+        <AdminPage selected='absensi' title={'Absensi Result'}>
             <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 3xl:grid-cols-5 w-full h-full gap-4'>
                 {divisi.map((item, index) => <Link key={index} href={`/admin/absensi/inout/${item.name.toLowerCase()}`}><CardAbsensi name={item.name} /></Link>)}
             </div>

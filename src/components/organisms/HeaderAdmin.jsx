@@ -1,13 +1,13 @@
 "use client"
 import { RxHamburgerMenu } from "react-icons/rx";
 
-const HeaderAdmin = ({handleSidebar}) => {
+const HeaderAdmin = ({handleSidebar, title = 'Dashboard'}) => {
   return (
     <div className="px-4 py-6 flex flex-row gap-3 items-center sticky w-full top-0 z-[50] bg-white">
         <div onClick={handleSidebar} className="p-2 flex md:hidden">
             <RxHamburgerMenu />
         </div>
-        <h1 className="text-blue-500 font-bold">Dashboard</h1>
+        <h1 className="text-blue-500 font-bold">{title}</h1>
     </div>
   )
 }

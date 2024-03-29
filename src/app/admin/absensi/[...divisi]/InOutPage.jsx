@@ -20,7 +20,7 @@ const CardInOut = () => {
 const InOutPage = ({ param }) => {
 
     return (
-        <AdminPage selected="absensi">
+        <AdminPage selected="absensi" title={'Absensi Result'}>
             <AbsensiPage param={param}>
                 <div className="px-0 md:px-6 py-3 overflow-y-auto flex-1 flex flex-col">
                     <div className="flex flex-col lg:flex-row gap-2 items-start xl:items-center lg:justify-start lg:items-start">
