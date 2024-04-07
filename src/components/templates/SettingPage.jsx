@@ -12,7 +12,7 @@ const SettingPage = ({ children, selected }) => {
                     <Link className={`${selected === 'password' ? 'bg-slate-200' : ''} w-full text-left px-3 py-1`} href={`/admin/setting/password`}>
                         <button className="text-start">Change Password</button>
                     </Link>
-                    <Link className={`${selected === 'information' ? 'bg-slate-200' : ''} w-full text-left px-3 py-1`} href={`/admin/setting/general}`}>
+                    <Link className={`${selected === 'information' ? 'bg-slate-200' : ''} w-full text-left px-3 py-1`} href={`/admin/setting/information`}>
                         <button className="text-start">Information</button>
                     </Link>
                     <Link className={`${selected === 'notification' ? 'bg-slate-200' : ''} w-full text-left px-3 py-1`} href={`/admin/setting/general}`}>
