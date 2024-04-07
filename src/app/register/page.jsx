@@ -2,14 +2,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import {
-  FaApple,
-  FaRegRegistered,
-  FaRegistered,
-  FaWpforms,
-} from "react-icons/fa";
+import { FaApple, FaWpforms } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa";
-import { FaFingerprint } from "react-icons/fa";
 
 export default function Home() {
   const [showPassword, setShowPassword] = useState(false);
@@ -38,17 +32,31 @@ export default function Home() {
         </div>
       </div>
       <div className="flex flex-col bg-blue-main w-full flex-1 md:flex-none md:w-[40%] md:max-w-[600px] text-white px-8 py-3">
-        <h1 className="mt-12 text-3xl">Welcome To Dashboard E-System</h1>
-        <p className="text-sm">
-          Please Sign-in to your account and start the adventure
-        </p>
+        <h1 className="mt-12 text-3xl">Adventure start Here</h1>
+        <p className="text-sm">Create new account to be adventure</p>
         <div className="flex flex-col gap-3 text-xs flex-1 justify-center">
           <div className="flex flex-col gap-2">
-            <label htmlFor="email">Email</label>
+            <label htmlFor="name">Name</label>
             <div className="border-[2px] px-3 rounded-[17px] py-3">
               <input
                 className="bg-transparent w-full outline-none"
                 type="text"
+                name=""
+                id="name"
+              />
+            </div>
+          </div>
+          <div className="flex flex-col gap-2">
+            <div className="flex flex-row gap-1">
+              <label className="flex-1" htmlFor="email">
+                Email
+              </label>
+              <button>Send code verify</button>
+            </div>
+            <div className="border-[2px] px-3 rounded-[17px] py-3 relative">
+              <input
+                className="bg-transparent w-full outline-none"
+                type="email"
                 name=""
                 id="email"
               />
@@ -59,7 +67,6 @@ export default function Home() {
               <label className="flex-1" htmlFor="password">
                 Password
               </label>
-              <button>Forget Password?</button>
             </div>
             <div className="border-[2px] pr-16 px-3 rounded-[17px] py-3 relative">
               <input
@@ -88,29 +95,37 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="flex flex-row gap-2 items-center">
+
+          <div className="flex flex-col gap-2">
+            <label htmlFor="verifyid">Verif ID</label>
+            <div className="border-[2px] px-3 rounded-[17px] py-3">
+              <input
+                className="bg-transparent w-full outline-none"
+                type="text"
+                name=""
+                id="verifyid"
+              />
+            </div>
+          </div>
+
+          <div className="flex flex-row gap-2 mt-2 items-center">
             <input
               className="checked:fill-green-500"
               type="checkbox"
               name=""
-              id="remember"
+              id="aggree"
             />
-            <label htmlFor="remember">Remember Me</label>
+            <label htmlFor="aggree">I Agree to Privacy & Policy Terms</label>
           </div>
           <div className="flex w-full justify-center mt-3">
             <Link href={"/admin/home"}>
               <button className="bg-white px-12 py-2 text-primary rounded-[17px]">
-                Sign In
+                Sign Up
               </button>
             </Link>
           </div>
           <span className="text-center mt-4">Or Sign Up with :</span>
           <div className="flex flex-row flex-wrap justify-center gap-6">
-            <Link href={"/register"}>
-              <button className="bg-white hover:bg-gray-100 rounded-[10px] py-2 px-4">
-                <FaWpforms className="fill-primary h-[20px] w-[20px]" />
-              </button>
-            </Link>
             <button className="bg-white hover:bg-gray-100 rounded-[10px] py-2 px-4">
               <FaGoogle className="fill-primary h-[20px] w-[20px]" />
             </button>
