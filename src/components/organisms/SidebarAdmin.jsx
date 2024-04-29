@@ -11,7 +11,7 @@ const SidebarAdmin = ({ showSidebar, handleSidebar, selected = "" }) => {
     if (
       selected === "absensi" ||
       selected === "approval" ||
-      selected === "chat" ||
+      selected === "divchat" ||
       selected === "arsip" ||
       selected === "payroll"
     )
@@ -102,11 +102,14 @@ const SidebarAdmin = ({ showSidebar, handleSidebar, selected = "" }) => {
               Payroll
             </li>
           </ul>
-          <ItemSidebar
-            title={"Chat"}
-            isNotif
-            image={"/assets/icons/ic_chat.svg"}
-          />
+          <Link href={"/admin/chat"}>
+            <ItemSidebar
+              title={"Chat"}
+              isNotif
+              selected={selected === "chat"}
+              image={"/assets/icons/ic_chat.svg"}
+            />
+          </Link>
           <Link href={"/admin/notification"}>
             <ItemSidebar
               title={"Notifikasi"}

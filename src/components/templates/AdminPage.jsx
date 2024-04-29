@@ -14,9 +14,9 @@ const AdminPage = ({children, selected = '', title}) => {
     return (
         <div className="flex flex-col min-h-[100dvh]">
             <SidebarAdmin selected={selected} showSidebar={showSidebar} handleSidebar={handleSidebar} />
-            <div className="md:pl-[300px] w-full flex flex-col duration-300 ease-in-out">
+            <div className="md:pl-[300px] w-full flex flex-col duration-300 ease-in-out h-full flex-1 ">
                 <HeaderAdmin title={title} handleSidebar={handleSidebar} />
-                <div className="px-6">
+                <div className="px-6 w-full  h-full flex flex-col">
                     {children}
                 </div>
             </div>
