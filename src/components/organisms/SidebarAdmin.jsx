@@ -80,13 +80,15 @@ const SidebarAdmin = ({ showSidebar, handleSidebar, selected = "" }) => {
                 Approvall
               </li>
             </Link>
-            <li
-              className={`px-2 py-2 pl-20 ${
-                selected === "chat" ? "bg-[#354DF4]" : ""
-              }`}
-            >
-              Div Chat
-            </li>
+            <Link href={"/admin/div-chat"}>
+              <li
+                className={`px-2 py-2 pl-20 ${
+                  selected === "divchat" ? "bg-[#354DF4]" : ""
+                }`}
+              >
+                Div Chat
+              </li>
+            </Link>
             <li
               className={`px-2 py-2 pl-20 ${
                 selected === "arsip" ? "bg-[#354DF4]" : ""
