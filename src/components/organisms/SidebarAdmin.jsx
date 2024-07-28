@@ -96,13 +96,15 @@ const SidebarAdmin = ({ showSidebar, handleSidebar, selected = "" }) => {
             >
               E-Arsip
             </li>
-            <li
-              className={`px-2 py-2 pl-20 ${
-                selected === "payroll" ? "bg-[#354DF4]" : ""
-              }`}
-            >
-              Payroll
-            </li>
+            <Link href={"/admin/payroll"}>
+              <li
+                className={`px-2 py-2 pl-20 ${
+                  selected === "payroll" ? "bg-[#354DF4]" : ""
+                }`}
+              >
+                Payroll
+              </li>
+            </Link>
           </ul>
           <Link href={"/admin/chat"}>
             <ItemSidebar
@@ -129,14 +131,13 @@ const SidebarAdmin = ({ showSidebar, handleSidebar, selected = "" }) => {
           </Link>
 
           <Link href="/admin/division">
-          <ItemSidebar
-            title={"Division"}
-            image={"/assets/icons/ic_divisi.svg"}
-            selected={selected === "division"}
-          />
+            <ItemSidebar
+              title={"Division"}
+              image={"/assets/icons/ic_divisi.svg"}
+              selected={selected === "division"}
+            />
           </Link>
 
-          
           <Link href="/admin/setting/general">
             <ItemSidebar
               title={"Setting"}
