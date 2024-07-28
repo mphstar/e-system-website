@@ -128,10 +128,15 @@ const SidebarAdmin = ({ showSidebar, handleSidebar, selected = "" }) => {
             />
           </Link>
 
+          <Link href="/admin/division">
           <ItemSidebar
             title={"Division"}
             image={"/assets/icons/ic_divisi.svg"}
+            selected={selected === "division"}
           />
+          </Link>
+
+          
           <Link href="/admin/setting/general">
             <ItemSidebar
               title={"Setting"}
