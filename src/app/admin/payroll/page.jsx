@@ -1,5 +1,6 @@
 import AdminPage from "@/components/templates/AdminPage";
 import PayrollPage from "@/components/templates/PayrollPage";
+import Link from "next/link";
 import React from "react";
 
 const CardView = ({ name }) => {
@@ -16,9 +17,15 @@ const page = () => {
       <PayrollPage selected="payroll">
         <div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-                <CardView name="Run Payroll" />
-                <CardView name="History Payroll" />
-                <CardView name="Setting" />
+            <Link href="/admin/payroll/run-payroll">
+              <CardView name="Run Payroll" />
+            </Link>
+            <Link href="/admin/payroll/history-payroll">
+              <CardView name="History Payroll" />
+            </Link>
+            <Link href="/admin/payroll/setting-payroll">
+              <CardView name="Setting" />
+            </Link>
           </div>
         </div>
       </PayrollPage>

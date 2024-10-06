@@ -89,13 +89,15 @@ const SidebarAdmin = ({ showSidebar, handleSidebar, selected = "" }) => {
                 Div Chat
               </li>
             </Link>
-            <li
-              className={`px-2 py-2 pl-20 ${
-                selected === "arsip" ? "bg-[#354DF4]" : ""
-              }`}
-            >
-              E-Arsip
-            </li>
+            <Link href={"/admin/e-arsip"}>
+              <li
+                className={`px-2 py-2 pl-20 ${
+                  selected === "arsip" ? "bg-[#354DF4]" : ""
+                }`}
+              >
+                E-Arsip
+              </li>
+            </Link>
             <Link href={"/admin/payroll"}>
               <li
                 className={`px-2 py-2 pl-20 ${
